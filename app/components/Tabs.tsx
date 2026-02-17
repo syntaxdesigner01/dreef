@@ -9,7 +9,7 @@ interface TabsProps {
 
 const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
   return (
-    <div className="flex items-center gap-8 border-b border-gray-200 mt-8 mb-6">
+    <div className="flex items-center gap-8  mt-8 mb-6">
       <button
         onClick={() => onTabChange("details")}
         className={clsx(
