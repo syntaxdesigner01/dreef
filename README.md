@@ -58,17 +58,26 @@ My approach was grounded in **Component-Driven Development (CDD)**. I started by
 
 ### Challenges & Solutions
 
-#### 1. The CSS-Only Chevron Progress Bar
-
-**Challenge**: The design required a progress bar where each stage is shaped like an arrow/chevron (`>`) flowing into the next, which is difficult to achieve with standard rectangular borders.
-**Solution**: I implemented this using CSS `clip-path`. I defined polygon shapes (e.g., `polygon(0% 0%, 92% 0%, 100% 50%...)`) to essentially "cut" the div into an arrow. This allowed for a fluid, scalable design that works on all screen sizes without relying on static images.
-
-#### 2. Exact Color Matching & Transparencies
+#### 1. Exact Color Matching & Transparencies
 
 **Challenge**: The UI relies heavily on subtle, specific background tints (e.g., distinct shades of pastel blue, teal, and purple) that didn't map 1:1 to default Tailwind palettes.
 **Solution**: I utilized Tailwind's arbitrary value syntax (e.g., `bg-[#6ADFF126]`) for exact design fidelity. For recurring brand colors, I considered extending the Tailwind theme, but for specific UI cards, arbitrary values provided the necessary precision without bloating the global configuration.
 
-#### 3. Responsive Layout Strategy
+#### 2. Responsive Layout Strategy
 
 **Challenge**: Maintaining the detailed sidebar and header information on mobile devices without cluttering the screen.
 **Solution**: I adopted a "hide-and-stack" strategy. The Sidebar becomes a hidden drawer or simplified nav on smaller screens, while the `ProjectHeader` reorganizes its flex direction from row to column. Typography sizes were seamlessly adjusted using breakpoints (`md:text-sm`) to ensure readability on phones.
+
+#### 3. Mobile Progress Bar Overflow
+
+**Challenge**: The progress bar stages caused horizontal overflow on mobile devices. Each stage used `flex-1` (forcing equal widths), negative margins for overlap, and arrow clip shapes, which together made the component wider than the viewport and broke the layout.
+
+**Solution**: I refactored the layout to use fixed minimum widths with controlled horizontal scrolling, removing the causes of unintended overflow while preserving the visual arrow design.
+
+- **Removed Flexible Widths**: Replaced `flex-1` with `shrink-0` and `min-width` so items size to their content instead of stretching beyond the screen.
+- **Responsive Overlap Adjustment**: Reduced the negative margin on small screens (`-ml-2` on mobile, `-ml-4` on larger devices) to prevent elements from being pushed outside the viewport.
+- **Safe Scroll Container**: Wrapped the progress bar in an `overflow-hidden` parent and an inner `overflow-x-auto` container, allowing intentional horizontal scrolling without affecting the page layout.
+- **Mobile-First Sizing**: Introduced responsive minimum widths (`min-w-[140px]` → `md:min-w-[180px]`) to maintain readability while keeping the component within bounds.
+- **Preserved Visual Design**: Retained the arrow clip paths and stacking order (`z-index`) so the progress indicator remains visually connected across stages.
+
+This approach eliminated page-level horizontal scrolling on mobile while keeping the component responsive, accessible, and visually consistent across screen sizes.
