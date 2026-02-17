@@ -11,33 +11,31 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<"details" | "tracker">("details");
 
   return (
-    <div className="flex min-h-screen bg-white font-sans text-gray-900 ">
+    <div className="flex flex-1 bg-white font-sans text-gray-900 overflow-hidden">
       {/* Sidebar - Hidden on mobile, shown on large screens */}
-     
 
       {/* Main Content */}
-      <main className="flex-1 h-screen bg-gray-100">
+      <main className="flex-1 bg-gray-100 overflow-y-auto">
         <div className="max-w-6xl mx-auto p-6 md:p-8 pb-20">
-            <ProjectHeader />
-            
-           <section className="flex gap-2">
-          
-          <section className="bg-white p-4 mt-4 rounded-md">
+          <ProjectHeader />
+
+          <section className="flex gap-2">
+            <section className="bg-white p-4 mt-4 rounded-md">
               <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
-            
-             <div className="mt-6 ">
+
+              <div className="mt-6 ">
                 {activeTab === "details" ? (
-                    <ProjectDetails />
+                  <ProjectDetails />
                 ) : (
-                    <ProjectTracker />
+                  <ProjectTracker />
                 )}
+              </div>
+            </section>
+
+            <div className="hidden lg:block  mt-4">
+              <Sidebar />
             </div>
           </section>
-
-             <div className="hidden lg:block  mt-4">
-                <Sidebar />
-             </div>
-           </section>
         </div>
       </main>
     </div>

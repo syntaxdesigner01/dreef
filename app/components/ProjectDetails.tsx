@@ -1,19 +1,30 @@
 "use client";
 
-import {
-  LuFileText,
-  LuBox,
-  LuCalendar,
-  LuCircleCheck,
-  LuClipboard,
-  LuTriangleAlert,
-  LuUser,
-} from "react-icons/lu";
+import { useRef, useEffect } from "react";
+import { LuUser, LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 import InfoCard from "./InfoCard";
 import ProgressBar from "./ProgressBar";
 
 const ProjectDetails = () => {
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (tabsRef.current) {
+      tabsRef.current.scrollLeft = tabsRef.current.scrollWidth;
+    }
+  }, []);
+
+  const scroll = (direction: "left" | "right") => {
+    if (tabsRef.current) {
+      const scrollAmount = 200;
+      tabsRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col gap-8 w-full">
       {/* About Section */}
@@ -71,7 +82,7 @@ const ProjectDetails = () => {
       {/* Progress Bar & Tabs */}
       <section>
         <ProgressBar />
-        <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-gray-400 mt-6 px-2 border-b border-gray-100 pb-0 ">
+        <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-gray-400 mt-6 px-2 border-b border-gray-100 pb-0 w-full overflow-x-auto no-scrollbar">
           <span className="pb-3 hover:text-gray-600 cursor-pointer whitespace-nowrap">
             Transaction Description
           </span>
@@ -98,7 +109,7 @@ const ProjectDetails = () => {
           <div className="bg-cyan-100 p-3 px-5 font-bold text-teal-800 text-sm">
             Key challenges
           </div>
-          <div className="bg-white p-5 flex items-start justify-between">
+          <div className="bg-white p-5 flex flex-col md:flex-row items-start justify-between gap-4">
             <div className="max-w-2xl">
               <h4 className="text-base font-bold text-gray-900 mb-1">
                 Unresponsiveness of Client
@@ -108,7 +119,7 @@ const ProjectDetails = () => {
                 unresponsive
               </p>
             </div>
-            <div className="flex items-center gap-2 text-xs bg-cyan-50 px-3 py-1.5 rounded-full border border-cyan-100">
+            <div className="flex items-center gap-2 text-xs bg-cyan-50 px-3 py-1.5 rounded-full border border-cyan-100 self-start md:self-auto">
               <div className="p-1 bg-cyan-100 rounded-full text-cyan-700">
                 <LuUser size={12} fill="currentColor" />
               </div>
@@ -122,7 +133,7 @@ const ProjectDetails = () => {
           <div className="bg-cyan-100 p-3 px-5 font-bold text-teal-800 text-sm">
             Area of mananagement support
           </div>
-          <div className="bg-white p-5 flex items-start justify-between">
+          <div className="bg-white p-5 flex flex-col md:flex-row items-start justify-between gap-4">
             <div className="max-w-2xl">
               <h4 className="text-base font-bold text-gray-900 mb-1">
                 Client Unresponsiveness
@@ -132,7 +143,7 @@ const ProjectDetails = () => {
                 with client.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-xs bg-cyan-50 px-3 py-1.5 rounded-full border border-cyan-100">
+            <div className="flex items-center gap-2 text-xs bg-cyan-50 px-3 py-1.5 rounded-full border border-cyan-100 self-start md:self-auto">
               <div className="p-1 bg-cyan-100 rounded-full text-cyan-700">
                 <LuUser size={12} fill="currentColor" />
               </div>
