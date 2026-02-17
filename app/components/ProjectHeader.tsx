@@ -1,66 +1,122 @@
 "use client";
-import { LuBriefcase, LuChevronLeft, LuChevronRight, LuSun } from "react-icons/lu";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import StatCard from "./StatCard";
+import Image from "next/image";
 
 const ProjectHeader = () => {
   return (
     <div className="flex flex-col gap-6 w-full">
+      <section className="flex w-full justify-end items-center gap-4 font-medium text-[#111111D6]">
+        <div className="flex items-center gap-2">
+          <Image
+            src={"/download.svg"}
+            alt="download"
+            width={20}
+            height={20}
+            className="object-contain"
+            quality={100}
+            priority={true}
+          />
+
+          <span>Download Page</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Image
+            src={"/share.svg"}
+            alt="share"
+            width={20}
+            height={20}
+            className="object-contain"
+            quality={100}
+            priority={true}
+          />
+
+          <span>share</span>
+        </div>
+      </section>
+
       {/* Navigation & Logo */}
-      <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
-        <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+      <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 shadow-sm">
+        <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
           <LuChevronLeft /> Previous Project
         </button>
-        
-        <div className="flex items-center gap-2">
-             {/* Placeholder for Arnergy Logo */}
-            <div className="flex items-center gap-2">
-                <LuSun className="text-orange-500 text-3xl" />
-                <span className="text-2xl font-bold text-orange-500 tracking-tight">arnergy</span>
-            </div>
-        </div>
 
-        <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+        <Image
+          src={"/logo.svg"}
+          alt="logo"
+          width={200}
+          height={90}
+          className="object-contain"
+          quality={100}
+          priority={true}
+        />
+
+        <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
           Next Project <LuChevronRight />
         </button>
+
+        {/* mobile nav */}
+        <section className="md:hidden flex justify-between items-center w-full">
+          <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+            <LuChevronLeft /> Previous Project
+          </button>
+
+          <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+            Next Project <LuChevronRight />
+          </button>
+        </section>
       </div>
 
       {/* Project Title & Pipeline */}
       <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
         <h1 className="text-2xl font-bold text-gray-900">Anergy Solar Ltd</h1>
-        
+
         <div className="flex items-center gap-3">
-             <div className="h-12 w-12 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg shadow-green-200">
-                <LuBriefcase size={20} />
-             </div>
-             <div className="flex flex-col">
-                <span className="text-xs text-blue-500 font-bold uppercase tracking-wider">Deal Pipeline</span>
-                <span className="text-2xl font-bold text-gray-800">84.2Bn</span>
-             </div>
+          <div className="h-12 w-12 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg shadow-green-200">
+            {/* <LuBriefcase size={20} /> */}
+            <Image
+              src={"/briefcaseWhite.svg"}
+              alt="logo"
+              width={20}
+              height={20}
+              className="object-contain"
+              quality={100}
+              priority={true}
+            />
+          </div>
+          <div className="flex flex-col ">
+            <span className="text-xs  font-normal text-[#0E4B81] uppercase tracking-wider">
+              Deal Pipeline
+            </span>
+            <span className="text-2xl font-semibold text-[#0E4B81EB]">
+              84.2Bn
+            </span>
+          </div>
         </div>
       </div>
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <StatCard 
-            label="Energy" 
-            value="7,500Kwp" 
-            icon={'/briefcase.svg'} 
-            colorClass="bg-[#6ADFF166]"
-            iconColorClass="text-blue-900"
+        <StatCard
+          label="Energy"
+          value="7,500Kwp"
+          icon={"/briefcase.svg"}
+          colorClass="bg-[#6ADFF166]"
+          iconColorClass="text-blue-900"
         />
-        <StatCard 
-            label="Connections" 
-            value="59,115" 
-            icon={'/briefcase.svg'} 
-            colorClass="bg-[#6A9CDC66]"
-            iconColorClass="text-gray-800"
+        <StatCard
+          label="Connections"
+          value="59,115"
+          icon={"/briefcase.svg"}
+          colorClass="bg-[#6A9CDC66]"
+          iconColorClass="text-gray-800"
         />
-        <StatCard 
-            label="Communities" 
-            value="100" 
-            icon={'/briefcase.svg'} 
-            colorClass="bg-[#6AC8F166]"
-            iconColorClass="text-green-900"
+        <StatCard
+          label="Communities"
+          value="100"
+          icon={"/briefcase.svg"}
+          colorClass="bg-[#6AC8F166]"
+          iconColorClass="text-green-900"
         />
       </div>
     </div>

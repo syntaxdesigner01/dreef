@@ -16,7 +16,7 @@ export default function Home() {
      
 
       {/* Main Content */}
-      <main className="flex-1 overflow-y-auto h-screen bg-gray-100">
+      <main className="flex-1 h-screen bg-gray-100">
         <div className="max-w-6xl mx-auto p-6 md:p-8 pb-20">
             <ProjectHeader />
             
