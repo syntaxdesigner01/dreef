@@ -44,22 +44,22 @@ const ProjectHeader = () => {
         <StatCard 
             label="Energy" 
             value="7,500Kwp" 
-            icon={LuBriefcase} 
-            colorClass="bg-[#CFF4FC]"
+            icon={'/briefcase.svg'} 
+            colorClass="bg-[#6ADFF166]"
             iconColorClass="text-blue-900"
         />
         <StatCard 
             label="Connections" 
             value="59,115" 
-            icon={LuBriefcase} 
-            colorClass="bg-[#E2E3E5]"
+            icon={'/briefcase.svg'} 
+            colorClass="bg-[#6A9CDC66]"
             iconColorClass="text-gray-800"
         />
         <StatCard 
             label="Communities" 
             value="100" 
-            icon={LuBriefcase} 
-            colorClass="bg-[#D1E7DD]"
+            icon={'/briefcase.svg'} 
+            colorClass="bg-[#6AC8F166]"
             iconColorClass="text-green-900"
         />
       </div>
