@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import clsx from "clsx";
-import { LuChevronRight, LuChevronDown, LuClock, LuCircleCheck, LuFileText, LuMessageSquare, LuMoreHorizontal, LuVideo, LuImage } from "react-icons/lu";
+import { LuChevronRight, LuChevronDown, LuClock, LuCircleCheck, LuFileText, LuMessageSquare, LuMoveHorizontal, LuVideo, LuImage } from "react-icons/lu";
 
 interface TrackerItemProps {
   id: string;
