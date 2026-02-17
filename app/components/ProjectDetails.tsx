@@ -1,6 +1,8 @@
 "use client";
 
 import { LuFileText, LuBox, LuCalendar, LuCircleCheck, LuClipboard, LuTriangleAlert, LuUser } from "react-icons/lu";
+
+
 import InfoCard from "./InfoCard";
 import ProgressBar from "./ProgressBar";
 
@@ -22,38 +24,38 @@ const ProjectDetails = () => {
         <InfoCard 
             label="Transaction Stage" 
             value="Credit Approval" 
-            icon={LuClipboard} 
-            colorClass="bg-blue-100 text-blue-600"
+            icon={'/routing-2.svg'} 
+            colorClass="bg-[#B6D4EC] text-blue-600"
         />
         <InfoCard 
             label="Initial deal size" 
             value="3.4" 
-            icon={LuBox} 
-            colorClass="bg-purple-100 text-purple-600"
+            icon={'/box.svg'}  
+            colorClass="bg-[#D6C8EF] text-purple-600"
         />
         <InfoCard 
             label="Due diligence Status" 
             value="Completed" 
-            icon={LuFileText} 
-            colorClass="bg-cyan-100 text-cyan-600"
+            icon={'/document-text.svg'} 
+            colorClass="bg-[#AEE4EA] text-indigo-600"
         />
         <InfoCard 
             label="Business Model" 
             value="Commercial & Industrial" 
-            icon={LuFileText} 
-            colorClass="bg-indigo-100 text-indigo-600"
+            icon={'/document-text2.svg'} 
+            colorClass="bg-[#B5C4EE] text-indigo-600"
         />
         <InfoCard 
             label="Closing Date" 
             value="Jun 2025" 
-            icon={LuCalendar} 
-            colorClass="bg-green-100 text-green-600"
+           icon={'/document-text3.svg'} 
+            colorClass="bg-[#BBE7D0] text-indigo-600"
         />
         <InfoCard 
             label="Credit Approval" 
             value="Completed" 
-            icon={LuCircleCheck} 
-            colorClass="bg-indigo-100 text-indigo-600"
+            icon={'/clipboard-tick.svg'} 
+            colorClass="bg-[#C4CDF2] text-indigo-600"
         />
       </section>
 
