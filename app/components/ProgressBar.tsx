@@ -14,7 +14,7 @@ const ProgressBar = () => {
         <div
           key={idx}
           className={clsx(
-            "flex-1 relative h-10 flex items-center justify-center text-xs font-bold",
+            "flex-1 relative h-10 flex items-center justify-center whitespace-nowrap text-[10px] md:text-xs font-medium",
             // Arrow shape
             idx !== stages.length - 1 ? "clip-arrow-right" : "clip-arrow-end",
             // Colors
@@ -22,12 +22,12 @@ const ProgressBar = () => {
             stage.status === "current" && "bg-teal-700 text-white z-10",
             stage.status === "pending" && "bg-gray-100 text-gray-500",
             // Overlap adjustment
-            idx !== 0 && "-ml-4"
+            idx !== 0 && "-ml-4",
           )}
-          style={{ 
-              paddingLeft: idx !== 0 ? '2rem' : '0',
-              paddingRight: '1rem',
-              zIndex: stages.length - idx 
+          style={{
+            paddingLeft: idx !== 0 ? "2rem" : "0",
+            paddingRight: "1rem",
+            zIndex: stages.length - idx,
           }}
         >
           {stage.name}
@@ -35,7 +35,14 @@ const ProgressBar = () => {
       ))}
       <style jsx>{`
         .clip-arrow-right {
-          clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%);
+          clip-path: polygon(
+            0% 0%,
+            92% 0%,
+            100% 50%,
+            92% 100%,
+            0% 100%,
+            8% 50%
+          );
         }
         .clip-arrow-end {
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 8% 50%);
