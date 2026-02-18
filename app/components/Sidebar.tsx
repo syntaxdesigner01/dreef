@@ -14,34 +14,49 @@ const Sidebar = () => {
     <aside className="w-full lg:w-80  border-l border-gray-100   flex flex-col gap-8 h-[calc(100vh-4rem)]">
       {/* Deal Documents */}
       <div className="bg-white p-4 rounded-md">
-        <h3 className="font-bold text-gray-900 mb-4 text-base">Deal documents</h3>
+        <h3 className="font-bold text-gray-900 mb-4 text-base">
+          Deal documents
+        </h3>
         <div className="flex flex-col gap-3">
           {documents.map((doc, idx) => (
             <div
               key={idx}
               className={clsx(
                 "group flex items-center justify-between px-3 py-2 w-full h-12 rounded-lg border-b-[0.8px] transition-all cursor-pointer",
-                doc.active ? "bg-cyan-50/70 hover:bg-cyan-100/80 border-cyan-100" : "bg-cyan-50/70 hover:bg-gray-100/50 border-gray-100"
+                doc.active
+                  ? "bg-[#6ADFF126] hover:bg-cyan-100/80 border-cyan-100"
+                  : "bg-cyan-100/20 hover:bg-gray-100/50 border-gray-100",
               )}
             >
               <div className="flex items-center gap-3">
-                <div className={clsx(
+                <div
+                  className={clsx(
                     "p-2 rounded-full flex items-center justify-center transition-colors",
-                    doc.active ? "bg-cyan-100 text-cyan-700" : "bg-gray-100 text-gray-400"
-                )}>
+                    doc.active
+                      ? "bg-[#AEE4EA] text-cyan-700"
+                      : "bg-cyan-100/40 text-[#0E7581]",
+                  )}
+                >
                   <LuFileText size={18} strokeWidth={2} />
                 </div>
-                <span className={clsx(
-                    "text-sm font-medium", 
-                    doc.active ? "text-gray-700" : "text-gray-400"
-                )}>
+                <span
+                  className={clsx(
+                    "text-sm font-medium",
+                    doc.active ? "text-gray-700" : "text-gray-400",
+                  )}
+                >
                   {doc.name}
                 </span>
               </div>
-              <LuDownload className={clsx(
+              <LuDownload
+                className={clsx(
                   "mr-1 transition-all hover:scale-110",
-                  doc.active ? "text-cyan-600 hover:text-cyan-800" : "text-gray-300 hover:text-gray-500"
-              )} size={18} />
+                  doc.active
+                    ? "text-cyan-600 hover:text-cyan-800"
+                    : "text-gray-300 hover:text-gray-500",
+                )}
+                size={18}
+              />
             </div>
           ))}
         </div>
@@ -49,25 +64,33 @@ const Sidebar = () => {
 
       {/* Team Members */}
       <div className=" flex flex-col gap-2">
-          <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
-              <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-teal-800">
-                  <LuUser size={24} fill="currentColor" className="text-teal-800" />
-              </div>
-              <div>
-                  <p className="text-xs text-gray-500 font-medium mb-0.5">Project Manager</p>
-                  <p className="font-bold text-gray-800 text-base">Monsurat Adeniyi</p>
-              </div>
+        <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
+          <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-teal-800">
+            <LuUser size={24} fill="currentColor" className="text-teal-800" />
           </div>
+          <div>
+            <p className="text-xs text-gray-500 font-medium mb-0.5">
+              Project Manager
+            </p>
+            <p className="font-bold text-gray-800 text-base">
+              Monsurat Adeniyi
+            </p>
+          </div>
+        </div>
 
-          <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
-              <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-teal-800">
-                  <LuUser size={24} fill="currentColor" className="text-teal-800" />
-              </div>
-              <div>
-                  <p className="text-xs text-gray-500 font-medium mb-0.5">Project Analyst</p>
-                  <p className="font-bold text-gray-800 text-base">Precious Akinrin</p>
-              </div>
+        <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
+          <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-teal-800">
+            <LuUser size={24} fill="currentColor" className="text-teal-800" />
           </div>
+          <div>
+            <p className="text-xs text-gray-500 font-medium mb-0.5">
+              Project Analyst
+            </p>
+            <p className="font-bold text-gray-800 text-base">
+              Precious Akinrin
+            </p>
+          </div>
+        </div>
       </div>
     </aside>
   );

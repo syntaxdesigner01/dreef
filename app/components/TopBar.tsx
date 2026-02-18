@@ -37,7 +37,7 @@ const TopBar = () => {
             J
           </div>
 
-          <LuMenu className="text-black" size={24} />
+          {/* <LuMenu className="text-black" size={24} /> */}
         </div>
       </div>
     </header>

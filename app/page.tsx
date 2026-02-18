@@ -16,11 +16,11 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 bg-gray-100 overflow-y-auto">
-        <div className="max-w-6xl mx-auto p-6 md:p-8 pb-20">
+        <div className="max-w-6xl mx-auto p-2 md:p-8 pb-20">
           <ProjectHeader />
 
-          <section className="flex gap-2">
-            <section className="bg-white p-4 mt-4 rounded-md">
+          <section className="md:flex gap-2 ">
+            <section className="bg-white md:p-4 p-2 mt-4 rounded-md max-w-full">
               <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
 
               <div className="mt-6 ">

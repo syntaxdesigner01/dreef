@@ -58,17 +58,12 @@ My approach was grounded in **Component-Driven Development (CDD)**. I started by
 
 ### Challenges & Solutions
 
-#### 1. Exact Color Matching & Transparencies
-
-**Challenge**: The UI relies heavily on subtle, specific background tints (e.g., distinct shades of pastel blue, teal, and purple) that didn't map 1:1 to default Tailwind palettes.
-**Solution**: I utilized Tailwind's arbitrary value syntax (e.g., `bg-[#6ADFF126]`) for exact design fidelity. For recurring brand colors, I considered extending the Tailwind theme, but for specific UI cards, arbitrary values provided the necessary precision without bloating the global configuration.
-
-#### 2. Responsive Layout Strategy
+#### 1. Responsive Layout Strategy
 
 **Challenge**: Maintaining the detailed sidebar and header information on mobile devices without cluttering the screen.
 **Solution**: I adopted a "hide-and-stack" strategy. The Sidebar becomes a hidden drawer or simplified nav on smaller screens, while the `ProjectHeader` reorganizes its flex direction from row to column. Typography sizes were seamlessly adjusted using breakpoints (`md:text-sm`) to ensure readability on phones.
 
-#### 3. Mobile Progress Bar Overflow
+#### 2. Mobile Progress Bar Overflow
 
 **Challenge**: The progress bar stages caused horizontal overflow on mobile devices. Each stage used `flex-1` (forcing equal widths), negative margins for overlap, and arrow clip shapes, which together made the component wider than the viewport and broke the layout.
 
