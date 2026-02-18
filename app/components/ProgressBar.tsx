@@ -15,12 +15,14 @@ const ProgressBar = () => {
           <div
             key={idx}
             className={clsx(
-              "relative h-10 flex items-center justify-center whitespace-nowrap text-[10px] md:text-xs font-medium shrink-0",
+              "relative h-10 flex items-center justify-center whitespace-nowrap text-[10px] md:text-xs font-medium shrink-0 ",
 
-              "px-4 flex-1",
+              "px-4 flex-1 ",
 
               // Arrow shape
-              idx !== stages.length - 1 ? "clip-arrow-right" : "clip-arrow-end",
+              idx !== stages.length - 1
+                ? "clip-arrow-right "
+                : "clip-arrow-end ",
 
               // Colors
               stage.status === "completed" && "bg-cyan-100 text-teal-800 ",
@@ -28,7 +30,7 @@ const ProgressBar = () => {
               stage.status === "pending" && "bg-gray-100 text-gray-500",
 
               //  Smaller overlap on mobile
-              idx !== 0 && "-ml-2 md:-ml-4",
+              idx !== 0 && "-ml-2",
             )}
             style={{
               zIndex: stages.length - idx,
