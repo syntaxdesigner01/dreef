@@ -31,10 +31,10 @@ const ProjectDetails = () => {
       <div className="flex flex-col gap-8 ">
         {/* About Section */}
         <section>
-          <h3 className="text-gray-900 font-bold text-center md:text-start border-b-2 border-gray-900 pb-2 mb-4 w-full md:w-fit text-lg">
+          <h3 className="text-subPrimaryText font-medium text-center md:text-start border-b-2 border-grayMain pb-2 mb-4 w-full md:w-fit text-lg">
             About Project Sponsor
           </h3>
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className="text-subPrimaryText text-sm leading-relaxed">
             Arnergy Solar Limited ("Arnergy" or "the Company") is a distributed
             utility company that provides sustainable renewable energy solutions
             to customers, leveraging solar and lithium-ion storage technologies.
@@ -84,7 +84,7 @@ const ProjectDetails = () => {
         {/* Progress Bar & Tabs */}
         <section>
           <ProgressBar />
-          <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-gray-400 mt-6 px-2 border-b border-gray-100 pb-0 w-full overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-[#11111185] mt-6 px-2 border-b border-gray-100 pb-0 w-full overflow-x-auto no-scrollbar">
             <span className="pb-3 hover:text-gray-600 cursor-pointer whitespace-nowrap">
               Transaction Description
             </span>
@@ -94,11 +94,11 @@ const ProjectDetails = () => {
             <span className="pb-3 hover:text-gray-600 cursor-pointer whitespace-nowrap">
               Deal Pipeline
             </span>
-            <span className="bg-cyan-100 text-cyan-800 px-4 py-2 rounded-t-lg font-bold border-b-2 border-cyan-500 whitespace-nowrap">
+            <span className="bg-[#AEE4EA] text-[#0E7581] px-4 py-2 rounded-t-lg font-medium border-b-2 border-[#0E7581] whitespace-nowrap">
               Transaction Update
             </span>
           </div>
-          <p className="text-gray-500 mt-4 font-medium text-sm">
+          <p className="text-subPrimaryText  mt-4 font-normal text-sm">
             Credit Paper [maximum 20 pages] finalised [within 2 weeks of due
             diligence completion
           </p>

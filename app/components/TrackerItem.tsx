@@ -84,11 +84,11 @@ const TrackerItem = ({
               <span className="text-gray-400 mx-2">
                 <LuChevronRight />
               </span>
-              <span className="font-medium text-sm text-gray-700">
+              <span className="font-normal text-sm text-subPrimaryText">
                 Site Identification and Selection
               </span>
             </div>
-            <div className="text-xs font-bold px-2 py-1 rounded bg-gray-50 border border-gray-200 text-gray-600">
+            <div className="text-xs  px-2 py-1 rounded bg-white border border-[#2B2E311F] text-subPrimaryText">
               2
             </div>
           </div>
@@ -156,10 +156,10 @@ const TrackerItem = ({
               </div>
 
               <div className="mb-4 p-4">
-                <h4 className="font-bold text-sm text-gray-800 mb-1">
+                <h4 className="font-semibold text-sm text-subPrimaryText mb-1">
                   Objectives & Output
                 </h4>
-                <p className="text-xs text-teal-600 font-medium">
+                <p className="text-xs text-[#0E7581] font-medium">
                   Responsible: DREEF Technical team
                 </p>
               </div>
@@ -197,6 +197,7 @@ const TrackerItem = ({
                             alt="out"
                             height={12}
                             width={12}
+                            priority
                           />{" "}
                           Output: Commercial & Feasibility Report
                         </div>
@@ -248,11 +249,11 @@ const TrackerItem = ({
               <span className="text-gray-400 mx-2">
                 <LuChevronRight />
               </span>
-              <span className="font-medium text-sm text-gray-700">
+              <span className="font-normal text-sm text-subPrimaryText">
                 Execution of Exclusivity Agreement
               </span>
             </div>
-            <div className="text-xs font-bold px-2 py-1 rounded bg-gray-50 border border-gray-200 text-gray-600">
+            <div className="text-xs  px-2 py-1 rounded bg-white border border-[#2B2E311F] text-subPrimaryText">
               1
             </div>
           </div>

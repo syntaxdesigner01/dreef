@@ -16,8 +16,10 @@ const InfoCard = ({ label, value, icon, colorClass }: InfoCardProps) => {
         <Image src={icon} alt="icon" width={20} height={20} />
       </div>
       <div>
-        <h4 className="text-xs text-textLight mb-1">{label}</h4>
-        <p className="font-semibold text-[12px] text-gray-900 leading-tight">{value}</p>
+        <h4 className="text-xs text-[#1111119E] mb-1">{label}</h4>
+        <p className="font-semibold text-[12px] text-[#111111D6] leading-tight">
+          {value}
+        </p>
       </div>
     </div>
   );
