@@ -170,15 +170,15 @@ const TrackerItem = ({
                 {/* Completed */}
                 <div className="bg-green-50/50 md:p-4 p-2 rounded-lg border border-green-100  ">
                   <div className="flex flex-row items-center gap-2  justify-between w-full pt-2 md:hidden pb-4">
-                    <span className="bg-[#47B65C] text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full">
+                    <span className="bg-[#47B65C] text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full font-normal">
                       01/11/2025
                     </span>
                     <div className="flex gap-1">
-                      <span className="text-xs font-bold text-green-700">
+                      <span className="text-xs font-normal text-[#47B65C]">
                         SENT
                       </span>
-                      <div className="w-4 h-4 border border-green-500 bg-white rounded flex items-center justify-center">
-                        <LuCheck className="w-2 h-2 text-green-500" />
+                      <div className="w-4 h-4 border border-[#47B65C] bg-white rounded flex items-center justify-center">
+                        <LuCheck className="w-2 h-2 text-[#47B65C]" />
                       </div>
                     </div>
                   </div>
@@ -186,7 +186,7 @@ const TrackerItem = ({
                   <div className="flex items-start gap-3">
                     <LuCircleCheck className="text-green-500 mt-1" />
                     <div className="flex-1 gap-4">
-                      <p className="font-bold text-sm text-[#47B65C] line-clamp-1 line-through decoration-[#47B65C]">
+                      <p className="font-normal text-sm text-[#47B65C] line-clamp-1 line-through decoration-[#47B65C] ">
                         Obtain initial load estimates
                       </p>
 
@@ -202,14 +202,14 @@ const TrackerItem = ({
                           Output: Commercial & Feasibility Report
                         </div>
                         <div className="md:flex flex-row items-center gap-2  justify-end pt-2 hidden ">
-                          <span className="bg-[#47B65C] text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full">
+                          <span className="bg-[#47B65C] text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full font-normal">
                             01/11/2025
                           </span>
-                          <span className="text-xs font-bold text-green-700">
+                          <span className="text-xs font-normal text-[#47B65C]">
                             SENT
                           </span>
-                          <div className="w-4 h-4 border border-green-500 bg-white rounded flex items-center justify-center">
-                            <LuCheck className="w-2 h-2 text-green-500" />
+                          <div className="w-4 h-4 border border-[#47B65C] bg-white rounded flex items-center justify-center">
+                            <LuCheck className="w-2 h-2 text-[#47B65C]" />
                           </div>
                         </div>
                       </div>
@@ -268,20 +268,21 @@ const TrackerItem = ({
                   <Image
                     src="/user-avater1.svg"
                     alt="User"
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     quality={100}
+                    priority
                     className="rounded-full object-cover"
                   />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="font-bold text-sm text-gray-900">
+                    <span className="font-semibold text-sm text-subPrimaryText">
                       Monsurat Adeniyi
                     </span>
-                    <span className="text-xs text-gray-400">1m</span>
+                    <span className="text-xs text-[#ADB8CC]">1m</span>
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="text-xs text-subPrimaryText font-normal leading-relaxed pt-4">
                     A strong start with legal recognition and operational setup.
                     Wishing continued success.
                   </p>
@@ -294,8 +295,8 @@ const TrackerItem = ({
                   <Image
                     src="/user-avater2.svg"
                     alt="User"
-                    width={50}
-                    height={50}
+                    width={30}
+                    height={30}
                     quality={100}
                     priority
                     className="rounded-full object-cover"
@@ -303,12 +304,12 @@ const TrackerItem = ({
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="font-bold text-sm text-gray-900">
+                    <span className="font-semibold text-sm text-subPrimaryText">
                       Precious Akinrin
                     </span>
-                    <span className="text-xs text-gray-400">Just now</span>
+                    <span className="text-xs text-[#ADB8CC]">Just now</span>
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="text-xs text-subPrimaryText font-normal leading-relaxed pt-4">
                     Big step forward. Excited to see this new facility
                     officially established and ready to operate. The new
                     facility is officially ready to make an impact.
@@ -322,8 +323,8 @@ const TrackerItem = ({
                   <Image
                     src="/user-avater1.svg"
                     alt="User"
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     quality={100}
                     priority
                     className="rounded-full object-cover"
