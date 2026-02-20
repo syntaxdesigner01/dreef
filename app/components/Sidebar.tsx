@@ -1,5 +1,6 @@
 import { LuFileText, LuDownload, LuUser } from "react-icons/lu";
 import clsx from "clsx";
+import Image from "next/image";
 
 const Sidebar = () => {
   const documents = [
@@ -24,20 +25,21 @@ const Sidebar = () => {
               className={clsx(
                 "group flex items-center justify-between px-3 py-2 w-full h-12 rounded-lg border-b-[0.8px] transition-all cursor-pointer",
                 doc.active
-                  ? "bg-[#6ADFF126] hover:bg-cyan-100/80 border-cyan-100"
+                  ? "bg-[#6ADFF126] hover:bg-cyan-100/80 border-cyan-100 text-[#282E34] text-[16px]"
                   : "bg-cyan-100/20 hover:bg-gray-100/50 border-gray-100",
               )}
             >
               <div className="flex items-center gap-3">
-                <div
-                  className={clsx(
-                    "p-2 rounded-full flex items-center justify-center transition-colors",
-                    doc.active
-                      ? "bg-[#AEE4EA] text-cyan-700"
-                      : "bg-cyan-100/40 text-[#0E7581]",
-                  )}
-                >
-                  <LuFileText size={18} strokeWidth={2} />
+                <div>
+                  <Image
+                    src={doc.active ? "/document.svg" : "/document1.svg"}
+                    alt="document"
+                    width={32}
+                    height={32}
+                    className="object-contain"
+                    quality={100}
+                    priority={true}
+                  />
                 </div>
                 <span
                   className={clsx(
@@ -48,14 +50,16 @@ const Sidebar = () => {
                   {doc.name}
                 </span>
               </div>
-              <LuDownload
+              <Image
+                src={doc.active ? "/download1.svg" : "/download2.svg"}
+                alt="download"
+                width={20}
+                height={20}
+                quality={100}
+                priority={true}
                 className={clsx(
-                  "mr-1 transition-all hover:scale-110",
-                  doc.active
-                    ? "text-cyan-600 hover:text-cyan-800"
-                    : "text-gray-300 hover:text-gray-500",
+                  "mr-1 transition-all hover:scale-110 object-contain",
                 )}
-                size={18}
               />
             </div>
           ))}
@@ -65,28 +69,44 @@ const Sidebar = () => {
       {/* Team Members */}
       <div className=" flex flex-col gap-2">
         <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
-          <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-teal-800">
-            <LuUser size={24} fill="currentColor" className="text-teal-800" />
+          <div className="w-12 h-12 p-2 rounded-full bg-[#E9FAFD] flex items-center justify-center text-teal-800">
+            <Image
+              src={"/userIcon.svg"}
+              alt="userIcon"
+              width={40}
+              height={40}
+              className="object-contain"
+              quality={100}
+              priority={true}
+            />
           </div>
           <div>
-            <p className="text-xs text-gray-500 font-medium mb-0.5">
+            <p className="text-xs  text-gray-500 font-normal mb-0.5">
               Project Manager
             </p>
-            <p className="font-bold text-gray-800 text-base">
+            <p className="font-semibold text-gray-800 text-base">
               Monsurat Adeniyi
             </p>
           </div>
         </div>
 
         <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
-          <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-teal-800">
-            <LuUser size={24} fill="currentColor" className="text-teal-800" />
+          <div className="w-12 h-12 p-2 rounded-full bg-[#E9FAFD] flex items-center justify-center text-teal-800">
+            <Image
+              src={"/userIcon.svg"}
+              alt="userIcon"
+              width={40}
+              height={40}
+              className="object-contain"
+              quality={100}
+              priority={true}
+            />
           </div>
           <div>
-            <p className="text-xs text-gray-500 font-medium mb-0.5">
+            <p className="text-xs  text-gray-500 font-normal mb-0.5">
               Project Analyst
             </p>
-            <p className="font-bold text-gray-800 text-base">
+            <p className="font-semibold text-gray-800 text-base">
               Precious Akinrin
             </p>
           </div>

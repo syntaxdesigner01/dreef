@@ -5,6 +5,7 @@ import { LuUser, LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 import InfoCard from "./InfoCard";
 import ProgressBar from "./ProgressBar";
+import Image from "next/image";
 
 const ProjectDetails = () => {
   const tabsRef = useRef<HTMLDivElement>(null);
@@ -112,17 +113,22 @@ const ProjectDetails = () => {
             </div>
             <div className="bg-white p-5 flex flex-col md:flex-row items-start justify-between gap-4">
               <div className="max-w-2xl">
-                <h4 className="text-base font-bold text-gray-900 mb-1">
+                <h4 className="text-base font-semibold text-primaryText mb-1">
                   Unresponsiveness of Client
                 </h4>
-                <p className="text-sm text-gray-500">
+                <p className="text-xs text-subPrimaryText">
                   Client is in the process of raising equity, hence has been
                   unresponsive
                 </p>
               </div>
-              <div className="flex items-center gap-2 text-xs bg-cyan-50 px-3 py-1.5 rounded-full border border-cyan-100 self-start md:self-auto">
-                <div className="p-1 bg-cyan-100 rounded-full text-cyan-700">
-                  <LuUser size={12} fill="currentColor" />
+              <div className="flex items-center gap-2 text-xs px-3 py-1.5 rounded-full  self-start md:self-auto">
+                <div className="p-1 bg-[#E9FAFD] rounded-full text-primaryText">
+                  <Image
+                    src="/userIcon.svg"
+                    alt="user"
+                    width={12}
+                    height={12}
+                  />
                 </div>
                 <span className="font-bold text-gray-800">
                   Precious Akinrin
@@ -132,23 +138,28 @@ const ProjectDetails = () => {
           </section>
 
           {/* Area of management support */}
-          <section className="rounded-xl overflow-hidden border border-cyan-100 shadow-sm">
+          <section className="rounded-xl overflow-hidden  shadow-sm">
             <div className="bg-cyan-100 p-3 px-5 font-bold text-teal-800 text-sm">
               Area of mananagement support
             </div>
             <div className="bg-white p-5 flex flex-col md:flex-row items-start justify-between gap-4">
               <div className="max-w-2xl">
-                <h4 className="text-base font-bold text-gray-900 mb-1">
+                <h4 className="text-base font-semibold text-primaryText mb-1">
                   Client Unresponsiveness
                 </h4>
-                <p className="text-sm text-gray-500">
+                <p className="text-xs text-subPrimaryText">
                   Transaction Team needs management team to assist in following
                   up with client.
                 </p>
               </div>
-              <div className="flex items-center gap-2 text-xs bg-cyan-50 px-3 py-1.5 rounded-full border border-cyan-100 self-start md:self-auto">
-                <div className="p-1 bg-cyan-100 rounded-full text-cyan-700">
-                  <LuUser size={12} fill="currentColor" />
+              <div className="flex items-center gap-2 text-xs px-3 py-1.5 rounded-full  self-start md:self-auto">
+                <div className="p-1 bg-[#E9FAFD] rounded-full text-primaryText">
+                  <Image
+                    src="/userIcon.svg"
+                    alt="user"
+                    width={12}
+                    height={12}
+                  />
                 </div>
                 <span className="font-bold text-gray-800">
                   Precious Akinrin

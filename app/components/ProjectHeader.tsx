@@ -38,7 +38,16 @@ const ProjectHeader = () => {
       {/* Navigation & Logo */}
       <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 shadow-sm">
         <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
-          <LuChevronLeft /> Previous Project
+          <Image
+            src={"/arrowRight.svg"}
+            alt="arrowLeft"
+            width={20}
+            height={20}
+            className="object-contain"
+            quality={100}
+            priority={true}
+          />{" "}
+          Previous Project
         </button>
 
         <Image
@@ -52,7 +61,16 @@ const ProjectHeader = () => {
         />
 
         <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
-          Next Project <LuChevronRight />
+          Next Project{" "}
+          <Image
+            src={"/arrowLeft.svg"}
+            alt="arrowLeft"
+            width={20}
+            height={20}
+            className="object-contain"
+            quality={100}
+            priority={true}
+          />{" "}
         </button>
 
         {/* mobile nav */}
@@ -72,7 +90,7 @@ const ProjectHeader = () => {
         <h1 className="text-2xl font-bold text-gray-900">Anergy Solar Ltd</h1>
 
         <div className="flex items-center gap-3">
-          <div className="h-12 w-12 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg shadow-green-200">
+          <div className="h-12 w-12 rounded-full bg-[#4ABF61] flex items-center justify-center text-white ">
             {/* <LuBriefcase size={20} /> */}
             <Image
               src={"/briefcaseWhite.svg"}

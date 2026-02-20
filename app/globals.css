@@ -12,7 +12,14 @@
   --primary: #52b788; /* Logo Green */
   --primary-dark: #2d6a4f;
   --accent-light: #e8f5f1;
-  --textLight: #11111185 /* Status Colors */ --status-complete-bg: #d1e7dd;
+  --textLight: #11111185;
+  --grayLight: #11111185;
+  --grayMain: #111111;
+  --primaryText: #2b2e31;
+  --subPrimaryText: #2b2e31d6;
+
+  /* Status Colors */
+  --status-complete-bg: #d1e7dd;
   --status-complete-text: #0f5132;
   --status-pending-bg: #fff3cd;
   --status-pending-text: #664d03;
@@ -33,6 +40,10 @@
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
   --color-accent-light: var(--accent-light);
+  --color-grayLight: var(--grayLight);
+  --color-grayMain: var(--grayMain);
+  --color-primaryText: var(--primaryText);
+  --color-subPrimaryText: var(--subPrimaryText);
 }
 
 body {

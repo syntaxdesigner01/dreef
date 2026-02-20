@@ -15,9 +15,9 @@ const ProgressBar = () => {
           <div
             key={idx}
             className={clsx(
-              "relative h-10 flex items-center justify-center whitespace-nowrap text-[10px] md:text-xs font-medium shrink-0 ",
+              "relative h-10 flex items-center justify-center whitespace-nowrap text-[10px] md:text-xs font-medium shrink-0 rounded-l-md",
 
-              "px-4 flex-1 ",
+              "px-4 flex-1  ",
 
               // Arrow shape
               idx !== stages.length - 1
@@ -25,12 +25,13 @@ const ProgressBar = () => {
                 : "clip-arrow-end ",
 
               // Colors
-              stage.status === "completed" && "bg-cyan-100 text-teal-800 ",
-              stage.status === "current" && "bg-teal-700 text-white z-10",
-              stage.status === "pending" && "bg-gray-100 text-gray-500",
+              stage.status === "completed" && "bg-[#AEE4EA] text-[#0E7581] ",
+              stage.status === "current" && "bg-[#0E7581] text-white z-10",
+              stage.status === "pending" &&
+                "bg-[#EEF0F2] text-[#2B2E31AD] font-medium",
 
               //  Smaller overlap on mobile
-              idx !== 0 && "-ml-2",
+              idx !== 0 && "-ml-3",
             )}
             style={{
               zIndex: stages.length - idx,
@@ -51,14 +52,20 @@ const ProgressBar = () => {
             );
           }
           .clip-arrow-end {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 8% 50%);
+            clip-path: polygon(
+              0% 0%,
+              92% 0%,
+              100% 50%,
+              92% 100%,
+              0% 100%,
+              8% 50%
+            );
           }
           /* First item needs straight left edge */
           div:first-child.clip-arrow-right {
             clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%);
           }
         `}</style>
-        ;
       </div>
     </div>
   );

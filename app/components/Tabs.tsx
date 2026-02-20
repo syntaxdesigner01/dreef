@@ -13,10 +13,10 @@ const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
       <button
         onClick={() => onTabChange("details")}
         className={clsx(
-          "pb-3 text-md md:text-sm font-bold transition-all relative",
+          "pb-3 text-md md:text-sm font-semibold transition-all relative",
           activeTab === "details"
-            ? "text-gray-900 border-b-2 border-gray-900"
-            : "text-gray-500 hover:text-gray-700",
+            ? "text-grayMain border-b-2 border-grayMain pr-6"
+            : "text-grayLight hover:text-gray-700",
         )}
       >
         Project Details
@@ -24,10 +24,10 @@ const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
       <button
         onClick={() => onTabChange("tracker")}
         className={clsx(
-          "pb-3 text-md md:text-sm font-bold transition-all relative",
+          "pb-3 text-md md:text-sm font-semibold transition-all relative",
           activeTab === "tracker"
-            ? "text-gray-900 border-b-2 border-gray-900 top-px" /* top-px to overlap border */
-            : "text-gray-500 hover:text-gray-700",
+            ? "text-grayMain border-b-2 border-grayMain pr-6"
+            : "text-grayLight hover:text-gray-700",
         )}
       >
         Project Tracker
