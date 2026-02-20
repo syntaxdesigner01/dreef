@@ -48,6 +48,12 @@ export default function RootLayout({
         />
         <link
           rel="preload"
+          href="/user-avater2.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
           href="/transcation.svg"
           as="image"
           type="image/svg+xml"

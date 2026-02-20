@@ -296,6 +296,7 @@ const TrackerItem = ({
                     width={50}
                     height={50}
                     quality={100}
+                    priority
                     className="rounded-full object-cover"
                   />
                 </div>
@@ -323,6 +324,7 @@ const TrackerItem = ({
                     width={50}
                     height={50}
                     quality={100}
+                    priority
                     className="rounded-full object-cover"
                   />
                 </div>
