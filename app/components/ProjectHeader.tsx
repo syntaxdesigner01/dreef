@@ -2,8 +2,14 @@
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import StatCard from "./StatCard";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ProjectHeader = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="flex flex-col gap-6 w-full">
       <section className="flex w-full justify-end items-center gap-4 font-medium text-[#111111D6]">
@@ -36,7 +42,13 @@ const ProjectHeader = () => {
       </section>
 
       {/* Navigation & Logo */}
-      <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 shadow-sm">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 shadow-sm"
+      >
         <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
           <Image
             src={"/arrowRight.svg"}
@@ -101,10 +113,17 @@ const ProjectHeader = () => {
             />{" "}
           </button>
         </section>
-      </div>
+      </motion.div>
 
       {/* Project Title & Pipeline */}
-      <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        variants={fadeIn}
+        className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm"
+      >
         <h1 className="text-xl md:text-2xl font-semibold text-subPrimaryText">
           Anergy Solar Ltd
         </h1>
@@ -131,10 +150,17 @@ const ProjectHeader = () => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        variants={fadeIn}
+        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+      >
         <StatCard
           label="Energy"
           value="7,500Kwp"
@@ -156,7 +182,7 @@ const ProjectHeader = () => {
           colorClass="bg-[#6AC8F166]"
           iconColorClass="text-green-900"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

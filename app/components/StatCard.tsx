@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -18,9 +19,11 @@ const StatCard = ({
   iconColorClass = "text-gray-700",
 }: StatCardProps) => {
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -4, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 300 }}
       className={clsx(
-        "rounded-xl p-6 flex items-center gap-4 text-gray-800",
+        "rounded-xl p-6 flex items-center gap-4 text-gray-800 cursor-pointer shadow-sm hover:shadow-md transition-shadow",
         colorClass,
       )}
     >
@@ -41,7 +44,7 @@ const StatCard = ({
           {value}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

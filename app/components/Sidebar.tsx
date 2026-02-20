@@ -12,7 +12,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-full lg:w-80  border-l border-gray-100   flex flex-col gap-8 h-[calc(100vh-4rem)]">
+    <aside className="w-full lg:w-80 border-l border-gray-100 flex flex-col gap-8 h-fit">
       {/* Deal Documents */}
       <div className="bg-white p-4 rounded-md">
         <h3 className="font-bold text-gray-900 mb-4 text-base">

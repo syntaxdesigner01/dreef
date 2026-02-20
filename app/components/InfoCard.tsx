@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { IconType } from "react-icons";
 import clsx from "clsx";
 import Image from "next/image";
@@ -11,7 +12,10 @@ interface InfoCardProps {
 
 const InfoCard = ({ label, value, icon, colorClass }: InfoCardProps) => {
   return (
-    <div className="bg-[#6ADFF126] border border-cyan-100 rounded-lg p-4 flex gap-4 items-start">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="bg-[#6ADFF126] border border-cyan-100 rounded-lg p-4 flex gap-4 items-start cursor-pointer hover:shadow-sm transition-shadow"
+    >
       <div className={clsx("p-2 rounded-full text-gray-700", colorClass)}>
         <Image src={icon} alt="icon" width={20} height={20} />
       </div>
@@ -21,7 +25,7 @@ const InfoCard = ({ label, value, icon, colorClass }: InfoCardProps) => {
           {value}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
