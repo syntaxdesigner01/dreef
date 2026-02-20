@@ -31,7 +31,7 @@ const ProgressBar = () => {
                 "bg-[#EEF0F2] text-[#2B2E31AD] font-medium",
 
               //  Smaller overlap on mobile
-              idx !== 0 && "-ml-3",
+              idx !== 0 && "md:-ml-3 -ml-2",
             )}
             style={{
               zIndex: stages.length - idx,
