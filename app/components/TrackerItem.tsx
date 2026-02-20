@@ -40,7 +40,7 @@ const TrackerItem = ({
     <div
       className={clsx(
         "border border-gray-200 rounded-lg overflow-hidden mb-4 bg-white shadow-sm  ",
-        isExpanded ? "w-full" : "md:w-[57vw]",
+        isExpanded ? "w-full" : "md:w-[57vw] ",
       )}
     >
       {/* Header */}
