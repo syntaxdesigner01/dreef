@@ -13,7 +13,7 @@ const ProjectHeader = () => {
             alt="download"
             width={20}
             height={20}
-            className="object-contain"
+            className="object-contain sm:h-5 sm:w-5"
             quality={100}
             priority={true}
           />
@@ -26,7 +26,7 @@ const ProjectHeader = () => {
             alt="share"
             width={20}
             height={20}
-            className="object-contain"
+            className="object-contain sm:h-5 sm:w-5"
             quality={100}
             priority={true}
           />
@@ -76,18 +76,38 @@ const ProjectHeader = () => {
         {/* mobile nav */}
         <section className="md:hidden flex justify-between items-center w-full">
           <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
-            <LuChevronLeft /> Previous Project
+            <Image
+              src={"/arrowRight.svg"}
+              alt="arrowLeft"
+              width={20}
+              height={20}
+              className="object-contain"
+              quality={100}
+              priority={true}
+            />{" "}
+            Previous Project
           </button>
 
           <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
-            Next Project <LuChevronRight />
+            Next Project{" "}
+            <Image
+              src={"/arrowLeft.svg"}
+              alt="arrowLeft"
+              width={20}
+              height={20}
+              className="object-contain"
+              quality={100}
+              priority={true}
+            />{" "}
           </button>
         </section>
       </div>
 
       {/* Project Title & Pipeline */}
       <div className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
-        <h1 className="text-2xl font-bold text-gray-900">Anergy Solar Ltd</h1>
+        <h1 className="text-xl md:text-2xl font-semibold text-subPrimaryText">
+          Anergy Solar Ltd
+        </h1>
 
         <div className="flex items-center gap-3">
           <div className="h-12 w-12 rounded-full bg-[#4ABF61] flex items-center justify-center text-white ">
@@ -106,7 +126,7 @@ const ProjectHeader = () => {
             <span className="text-xs  font-normal text-[#0E4B81] uppercase tracking-wider">
               Deal Pipeline
             </span>
-            <span className="text-2xl font-semibold text-[#0E4B81EB]">
+            <span className="md:text-2xl text-xl font-semibold text-[#0E4B81EB]">
               84.2Bn
             </span>
           </div>

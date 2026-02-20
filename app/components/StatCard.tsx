@@ -10,15 +10,36 @@ interface StatCardProps {
   subValue?: string;
 }
 
-const StatCard = ({ label, value, icon, colorClass, iconColorClass = "text-gray-700" }: StatCardProps) => {
+const StatCard = ({
+  label,
+  value,
+  icon,
+  colorClass,
+  iconColorClass = "text-gray-700",
+}: StatCardProps) => {
   return (
-    <div className={clsx("rounded-xl p-6 flex items-center gap-4 text-gray-800", colorClass)}>
+    <div
+      className={clsx(
+        "rounded-xl p-6 flex items-center gap-4 text-gray-800",
+        colorClass,
+      )}
+    >
       <div className="p-3 bg-[#DCECF9] rounded-full backdrop-blur-sm">
-         <Image src={icon} alt="icon" width={20} height={20} className={clsx("w-6 h-6", iconColorClass)} />
+        <Image
+          src={icon}
+          alt="icon"
+          width={20}
+          height={20}
+          className={clsx("w-6 h-6", iconColorClass)}
+        />
       </div>
       <div>
-        <p className="text-sm text-gray-500 font-medium">{label}</p>
-        <p className="text-2xl font-semibold text-[#111111] tracking-tight">{value}</p>
+        <p className="text-xs md:text-sm text-[#2B2E3185] font-normal">
+          {label}
+        </p>
+        <p className="text-xl md:text-2xl font-semibold text-[#111111EB] tracking-tight">
+          {value}
+        </p>
       </div>
     </div>
   );
