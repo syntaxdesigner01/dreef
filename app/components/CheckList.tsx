@@ -40,7 +40,7 @@ const CheckList = ({ title, detail }: CheckListProps) => {
 
             <div className="flex gap-2 items-center">
               <LuFileText className="h-3 w-3 text-[#282E3480]" />{" "}
-              <div className="mt-2 inline-flex items-center gap-2 bg-[#EDEAEC] text-subPrimaryText px-3 py-1 rounded text-[10px] md:text-xs">
+              <div className="mt-2 inline-flex items-center gap-2 bg-[#EDEAEC] text-subPrimaryText px-3 py-1 rounded-md text-[10px] md:text-xs">
                 {detail}
               </div>
             </div>
@@ -56,7 +56,7 @@ const CheckList = ({ title, detail }: CheckListProps) => {
               PENDING
             </p>
           </div>
-          <div className="w-4 h-4 border-[#2B2E314D] rounded"></div>
+          <div className="w-4 h-4 border border-[#2B2E314D] rounded"></div>
         </div>
       </div>
     </div>

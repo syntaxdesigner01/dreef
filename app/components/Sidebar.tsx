@@ -12,10 +12,10 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-full lg:w-80 border-l border-gray-100 flex flex-col gap-8 h-fit">
+    <aside className="w-full lg:w-80  flex flex-col gap-8 h-fit ">
       {/* Deal Documents */}
-      <div className="bg-white p-4 rounded-md">
-        <h3 className="font-bold text-gray-900 mb-4 text-base">
+      <div className="bg-white p-4 rounded-md border border-[#111111]/8">
+        <h3 className="font-semibold text-[#2B2E31] mb-4 text-base">
           Deal documents
         </h3>
         <div className="flex flex-col gap-3">
@@ -23,10 +23,10 @@ const Sidebar = () => {
             <div
               key={idx}
               className={clsx(
-                "group flex items-center justify-between px-3 py-2 w-full h-12 rounded-lg border-b-[0.8px] transition-all cursor-pointer",
+                "group flex items-center justify-between px-3 py-2 w-full h-12 rounded-lg  transition-all cursor-pointer",
                 doc.active
-                  ? "bg-[#6ADFF126] hover:bg-cyan-100/80 border-cyan-100 text-[#282E34] text-[16px]"
-                  : "bg-cyan-100/20 hover:bg-gray-100/50 border-gray-100",
+                  ? "bg-[#6ADFF126]  border-[#111111]/8 text-[#282E34] text-[16px]"
+                  : "bg-cyan-100/20  border-[#111111]/8",
               )}
             >
               <div className="flex items-center gap-3">
@@ -68,8 +68,8 @@ const Sidebar = () => {
 
       {/* Team Members */}
       <div className=" flex flex-col gap-2">
-        <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
-          <div className="w-12 h-12 p-2 rounded-full bg-[#E9FAFD] flex items-center justify-center text-teal-800">
+        <div className="bg-white p-[12px] rounded-md border-[0.5px] border-[#11111114]  flex items-center gap-[10px] h-[100px]">
+          <div className="w-12 h-12 p-2 rounded-full bg-[#E9FAFD] flex items-center justify-center">
             <Image
               src={"/userIcon.svg"}
               alt="userIcon"
@@ -81,17 +81,17 @@ const Sidebar = () => {
             />
           </div>
           <div>
-            <p className="text-xs  text-gray-500 font-normal mb-0.5">
+            <p className="text-xs  text-[#111111]/68 font-normal mb-0.5">
               Project Manager
             </p>
-            <p className="font-semibold text-gray-800 text-base">
+            <p className="font-medium text-[#111111D6] text-base">
               Monsurat Adeniyi
             </p>
           </div>
         </div>
 
-        <div className="bg-white p-[12px] rounded-[6px] border-[0.5px] border-gray-100 shadow-sm flex items-center gap-[10px] h-[100px]">
-          <div className="w-12 h-12 p-2 rounded-full bg-[#E9FAFD] flex items-center justify-center text-teal-800">
+        <div className="bg-white p-[12px] rounded-md border-[0.5px] border-[#11111114]  flex items-center gap-[10px] h-[100px]">
+          <div className="w-12 h-12 p-2 rounded-full bg-[#E9FAFD] flex items-center justify-center">
             <Image
               src={"/userIcon.svg"}
               alt="userIcon"
@@ -103,10 +103,10 @@ const Sidebar = () => {
             />
           </div>
           <div>
-            <p className="text-xs  text-gray-500 font-normal mb-0.5">
+            <p className="text-xs  text-[#111111]/68 font-normal mb-0.5">
               Project Analyst
             </p>
-            <p className="font-semibold text-gray-800 text-base">
+            <p className="font-medium text-[#111111D6] text-base">
               Precious Akinrin
             </p>
           </div>

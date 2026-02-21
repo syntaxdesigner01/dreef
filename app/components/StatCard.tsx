@@ -23,7 +23,7 @@ const StatCard = ({
       whileHover={{ y: -4, scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300 }}
       className={clsx(
-        "rounded-xl p-6 flex items-center gap-4 text-gray-800 cursor-pointer shadow-sm hover:shadow-md transition-shadow",
+        "rounded-xl p-6 flex items-center gap-4 text-gray-800 cursor-pointer transition-shadow border border-[#45CEE3]",
         colorClass,
       )}
     >
@@ -34,6 +34,7 @@ const StatCard = ({
           width={20}
           height={20}
           className={clsx("w-6 h-6", iconColorClass)}
+          priority
         />
       </div>
       <div>

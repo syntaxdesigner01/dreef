@@ -13,7 +13,7 @@ const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
       <button
         onClick={() => onTabChange("details")}
         className={clsx(
-          "pb-3 text-md md:text-sm font-semibold transition-all relative",
+          "pb-1 text-md md:text-[20px] font-semibold transition-all relative",
           activeTab === "details"
             ? "text-grayMain border-b-2 border-grayMain pr-6"
             : "text-grayLight hover:text-gray-700",
@@ -24,7 +24,7 @@ const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
       <button
         onClick={() => onTabChange("tracker")}
         className={clsx(
-          "pb-3 text-md md:text-sm font-semibold transition-all relative",
+          "pb-1 text-md md:text-[20px] font-semibold transition-all relative",
           activeTab === "tracker"
             ? "text-grayMain border-b-2 border-grayMain pr-6"
             : "text-grayLight hover:text-gray-700",

@@ -14,7 +14,7 @@ const InfoCard = ({ label, value, icon, colorClass }: InfoCardProps) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="bg-[#6ADFF126] border border-cyan-100 rounded-lg p-4 flex gap-4 items-start cursor-pointer hover:shadow-sm transition-shadow"
+      className="bg-[#6ADFF126] border border-[#47BAEB] rounded-lg p-4 flex gap-4 items-start cursor-pointer hover:shadow-sm transition-shadow"
     >
       <div className={clsx("p-2 rounded-full text-gray-700", colorClass)}>
         <Image src={icon} alt="icon" width={20} height={20} />

@@ -31,9 +31,14 @@ const ProjectDetails = () => {
       <div className="flex flex-col gap-8 ">
         {/* About Section */}
         <section>
-          <h3 className="text-subPrimaryText font-medium text-center md:text-start border-b-2 border-grayMain pb-2 mb-4 w-full md:w-fit text-lg">
+          <h3 className="text-subPrimaryText font-medium text-center md:text-start  mb-4 w-full md:w-fit  md:text-[16px] text-[14px]">
             About Project Sponsor
           </h3>
+
+          <div className="flex md:justify-start justify-center items-center w-full">
+            <div className="border-b border-subPrimaryText md:w-[18%] w-[50%]  h-2 relative -top-4 "></div>
+          </div>
+
           <p className="text-subPrimaryText text-sm leading-relaxed">
             Arnergy Solar Limited ("Arnergy" or "the Company") is a distributed
             utility company that provides sustainable renewable energy solutions
@@ -107,8 +112,8 @@ const ProjectDetails = () => {
         {/* Cards Section */}
         <div className="flex flex-col gap-4">
           {/* Key Challenges */}
-          <section className="rounded-xl overflow-hidden border border-cyan-100 shadow-sm">
-            <div className="bg-cyan-100 p-3 px-5 font-bold text-teal-800 text-sm">
+          <section className="rounded-md overflow-hidden border border-[#1111111E]  shadow-xs">
+            <div className="bg-[#AEE4EA] p-3 px-5 font-semibold text-[#0E7581] text-sm">
               Key challenges
             </div>
             <div className="bg-white p-5 flex flex-col md:flex-row items-start justify-between gap-4">
@@ -126,8 +131,8 @@ const ProjectDetails = () => {
                   <Image
                     src="/userIcon.svg"
                     alt="user"
-                    width={12}
-                    height={12}
+                    width={18}
+                    height={18}
                   />
                 </div>
                 <span className="font-bold text-gray-800">
@@ -138,8 +143,8 @@ const ProjectDetails = () => {
           </section>
 
           {/* Area of management support */}
-          <section className="rounded-xl overflow-hidden  shadow-sm">
-            <div className="bg-cyan-100 p-3 px-5 font-bold text-teal-800 text-sm">
+          <section className="rounded-md overflow-hidden border border-[#1111111E]  shadow-xs">
+            <div className="bg-[#AEE4EA] p-3 px-5 font-semibold text-[#0E7581] text-sm">
               Area of mananagement support
             </div>
             <div className="bg-white p-5 flex flex-col md:flex-row items-start justify-between gap-4">
@@ -147,7 +152,7 @@ const ProjectDetails = () => {
                 <h4 className="text-base font-semibold text-primaryText mb-1">
                   Client Unresponsiveness
                 </h4>
-                <p className="text-xs text-subPrimaryText">
+                <p className="text-xs text-subPrimaryText w-[85%]">
                   Transaction Team needs management team to assist in following
                   up with client.
                 </p>
@@ -157,8 +162,8 @@ const ProjectDetails = () => {
                   <Image
                     src="/userIcon.svg"
                     alt="user"
-                    width={12}
-                    height={12}
+                    width={18}
+                    height={18}
                   />
                 </div>
                 <span className="font-bold text-gray-800">

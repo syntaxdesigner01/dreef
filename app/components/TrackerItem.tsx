@@ -40,7 +40,7 @@ const TrackerItem = ({
   return (
     <div
       className={clsx(
-        "border border-gray-200 rounded-lg overflow-hidden mb-4 bg-white shadow-sm  ",
+        "border border-[#111111]/12 rounded-lg overflow-hidden mb-4 bg-white shadow-xs  ",
         isExpanded ? "w-full" : "md:w-[57vw] ",
       )}
     >
@@ -84,12 +84,12 @@ const TrackerItem = ({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:p-6 p-2 bg-gray-100 border-t border-gray-100 flex flex-col gap-4 w-full overflow-hidden"
+            className="md:px-6 px-2 bg-gray-100 border-t border-[#AEE4EA]/90 flex flex-col gap-4 w-full overflow-hidden"
           >
             {/* Site Identification and Selection */}
-            <div className="bg-white border border-gray-200 rounded-lg p-4 flex items-center justify-between mt-2 hover:bg-gray-50 cursor-pointer">
+            <div className="bg-white border border-[#111111]/12 rounded-lg p-4 flex items-center justify-between mt-2 cursor-pointer">
               <div className="flex items-center gap-3">
-                <span className="text-gray-400 mx-2">
+                <span className=" mx-2">
                   <LuChevronRight />
                 </span>
                 <span className="font-normal text-sm text-subPrimaryText">
@@ -109,11 +109,16 @@ const TrackerItem = ({
               )}
             >
               {/* Header Details */}
-              <div className="flex justify-between items-start mb-6 bg-[#5DC1A61A] p-4 border border-[#5DC1A680] rounded-t-md">
+              <div
+                className={clsx(
+                  "flex justify-between items-start  bg-[#5DC1A6]/10 p-4 border border-[#5DC1A6]/50 ",
+                  openBody ? "rounded-t-md" : "rounded-md",
+                )}
+              >
                 <div className="flex items-center gap-2">
                   {openBody ? (
                     <LuChevronUp
-                      className="  text-[#0E7581]"
+                      className="text-[#0E7581]"
                       onClick={(e) => setOpenBody(false)}
                     />
                   ) : (
@@ -138,7 +143,7 @@ const TrackerItem = ({
                     </div>
                   </div>
                 </div>
-                <div className="border border-gray-200 rounded px-3 py-1 bg-white text-xs font-bold text-gray-600">
+                <div className="border border-[#2B2E31]/12 rounded px-3 py-1 bg-white text-xs font-medium text-[#2B2E31]/84 relative top-5">
                   4 Outputs
                 </div>
               </div>
@@ -183,7 +188,7 @@ const TrackerItem = ({
 
                     <div className="flex flex-col md:gap-3 gap-4 p-4">
                       {/* Completed */}
-                      <div className="bg-green-50/50 md:p-4 p-2 rounded-lg border border-green-100  ">
+                      <div className="bg-[#47B65C]/8 md:p-4 p-2 rounded-lg border border-green-100  ">
                         <div className="flex flex-row items-center gap-2  justify-between w-full pt-2 md:hidden pb-4">
                           <span className="bg-[#47B65C] text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full font-normal">
                             01/11/2025
@@ -230,8 +235,8 @@ const TrackerItem = ({
                             </div>
 
                             <div className="flex items-center gap-1">
-                              <LuFileText className="h-3 w-3 text-[#47B65C80]" />{" "}
-                              <span className="mt-2 inline-flex items-center gap-2 bg-[#47B65C] text-white px-2 md:px-3 py-1 rounded text-[10px] md:text-xs">
+                              <LuFileText className="h-4 w-4 text-[#47B65C80]" />{" "}
+                              <span className="mt-2 inline-flex items-center gap-2 bg-[#47B65C] text-white px-2 md:px-3 py-1 rounded-md text-[10px] md:text-xs">
                                 Focus on key load drivers for quick forecasting.
                               </span>
                             </div>
@@ -260,8 +265,9 @@ const TrackerItem = ({
                 )}
               </AnimatePresence>
             </section>
+
             {/* Execution of Exclusivity Agreement */}
-            <div className="bg-white border border-gray-200 rounded-lg p-4 flex items-center justify-between mt-2 hover:bg-gray-50 cursor-pointer">
+            <div className="bg-white border border-[#111111]/12 rounded-lg p-4 flex items-center justify-between  cursor-pointer">
               <div className="flex items-center gap-3">
                 <span className="text-gray-400 mx-2">
                   <LuChevronRight />
@@ -274,8 +280,9 @@ const TrackerItem = ({
                 1
               </div>
             </div>
+
             {/* Comments Section */}
-            <div className="mt-8 md:p-10 p-4 border-t border-[#1111111F] ">
+            <div className=" md:p-10 p-4 border-t border-[#1111111F] ">
               <h3 className="font-bold text-sm text-gray-800 mb-4">Comments</h3>
 
               <div className="space-y-6">
@@ -335,13 +342,13 @@ const TrackerItem = ({
                 </div>
 
                 {/* Input */}
-                <div className="flex gap-4 items-center border-b border-gray-500 pb-2">
+                <div className="flex gap-4 items-center border-b border-[#111111]/12 pb-2">
                   <div className=" rounded-full  overflow-hidden">
                     <Image
                       src="/user-avater1.svg"
                       alt="User"
-                      width={40}
-                      height={40}
+                      width={30}
+                      height={30}
                       quality={100}
                       priority
                       className="rounded-full object-cover"
@@ -351,7 +358,7 @@ const TrackerItem = ({
                     <input
                       type="text"
                       placeholder="Add a comment..."
-                      className="w-full   px-4 py-2 text-sm focus:outline-none focus:border-teal-500 transition-colors"
+                      className="w-full placeholder:text-[#ADB8CC]  px-4 py-2 text-sm focus:outline-none focus:border-teal-500 transition-colors"
                       value={comment}
                       onChange={(e) => setComment(e.target.value)}
                     />

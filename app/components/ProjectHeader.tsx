@@ -47,9 +47,9 @@ const ProjectHeader = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
-        className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 shadow-sm"
+        className="bg-white rounded-md p-6 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4"
       >
-        <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+        <button className="hidden md:flex items-center gap-2 text-sm font-medium text-[#111111CC] hover:text-primary transition-colors">
           <Image
             src={"/arrowRight.svg"}
             alt="arrowLeft"
@@ -72,7 +72,7 @@ const ProjectHeader = () => {
           priority={true}
         />
 
-        <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+        <button className="hidden md:flex items-center gap-2 text-sm font-medium text-[#111111CC] hover:text-primary transition-colors">
           Next Project{" "}
           <Image
             src={"/arrowLeft.svg"}
@@ -87,7 +87,7 @@ const ProjectHeader = () => {
 
         {/* mobile nav */}
         <section className="md:hidden flex justify-between items-center w-full">
-          <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+          <button className="flex items-center gap-2 text-sm font-medium text-[#111111CC] hover:text-primary transition-colors">
             <Image
               src={"/arrowRight.svg"}
               alt="arrowLeft"
@@ -100,7 +100,7 @@ const ProjectHeader = () => {
             Previous Project
           </button>
 
-          <button className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-primary transition-colors">
+          <button className="flex items-center gap-2 text-sm font-medium text-[#111111CC] hover:text-primary transition-colors">
             Next Project{" "}
             <Image
               src={"/arrowLeft.svg"}
@@ -122,7 +122,7 @@ const ProjectHeader = () => {
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
         variants={fadeIn}
-        className="bg-white border border-gray-100 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm"
+        className="bg-white border border-[#47BAEB] rounded-md p-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
       >
         <h1 className="text-xl md:text-2xl font-semibold text-subPrimaryText">
           Anergy Solar Ltd

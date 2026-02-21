@@ -51,7 +51,7 @@ export default function Home() {
               </div>
             </section>
 
-            <div className="hidden lg:block  mt-4">
+            <div className="hidden md:block  mt-4">
               <Sidebar />
             </div>
           </section>

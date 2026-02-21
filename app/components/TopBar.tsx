@@ -18,15 +18,15 @@ const TopBar = () => {
 
       {/* User Profile Section */}
       <div className="flex items-center">
-        <div className="hidden md:flex items-center gap-3 bg-[#6ADFF11F] hover:bg-cyan-50 transition-colors border border-cyan-100 rounded-full pl-1 pr-4 py-1 cursor-pointer group">
-          <div className="w-8 h-8 rounded-full bg-[#0B77D51F] text-blue-700 flex items-center justify-center text-sm font-bold">
+        <div className="hidden md:flex items-center gap-3 bg-[#6ADFF11F] hover:bg-cyan-50 transition-colors border border-[#47BAEB]/40 rounded-full pl-1 pr-4 py-1 cursor-pointer group">
+          <div className="w-8 h-8 rounded-full bg-[#0B77D5]/12 text-[#0B77D5] flex items-center justify-center text-sm font-semibold border border-[#0B77D5]/12">
             J
           </div>
-          <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+          <span className="text-sm font-normal text-[#111111]/84 group-hover:text-gray-900">
             Johnson O.
           </span>
           <LuChevronDown
-            className="text-gray-400 group-hover:text-gray-600"
+            className="text-[#111111]/84 group-hover:text-gray-600"
             size={16}
           />
         </div>
